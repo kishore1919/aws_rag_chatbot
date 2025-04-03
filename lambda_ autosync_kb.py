@@ -6,9 +6,10 @@ If the required environment variables 'KNOWLEDGEBASEID' or 'DATASOURCEID' are mi
 The function is triggered by an event, which contains the user prompt, and returns a response with the generated text.
 Configure the Lambda function with the necessary environment variables.
 Make sure to set the environment variables KNOWLEDGEBASEID and DATASOURCEID in the Lambda function configuration.
-# This function is designed to be deployed on AWS Lambda, and it requires the following environment variables to be set:
+# This function is designed to be deployed on AWS Lambda, and it requires the following environment variables and triger to be set:
 - KNOWLEDGEBASEID: The ID of the knowledge base to be used for retrieval.
 - DATASOURCEID: The ID of the data source to be used for ingestion. 
+- Set a trigger for the Lambda function to run based on an event S3 upload, to ensure that the knowledge base is updated with the latest data.
 """
 import os
 import json

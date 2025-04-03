@@ -6,10 +6,6 @@ The function uses the Boto3 library to interact with AWS services, specifically 
 The function is designed to be deployed on AWS Lambda, and it requires the following environment variables to be set:
 - KNOWLEDGEBASEID: The ID of the knowledge base to be used for retrieval.
 - MODELARN: The Amazon Resource Name (ARN) of the model to be used for generation.
-
-Configure the Lambda function with the necessary permissions to access the Bedrock Agent Runtime and the knowledge base.
-Configure the Lambda function with the necessary environment variables.
-Make sure to set the environment variables KNOWLEDGEBASEID and MODELARN in the Lambda function configuration.
 """
 
 import json
