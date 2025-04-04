@@ -91,6 +91,31 @@ To build the backend of the application, we will interact with two AWS services:
     - The RAG chatbot can only retrieve information from the data it has been provided; it cannot answer general knowledge questions.
     ![example2](https://github.com/kishore1919/aws_rag_chatbot/blob/main/images/screenshot-2.png?raw=true)
 
+## Lambda
+
+The AWS RAG Chatbot leverages AWS Lambda functions to handle requests and responses efficiently. These Lambda functions are designed to process incoming queries, interact with the knowledge base, and return context-aware responses to the user.
+
+### Key Features of Lambda Integration:
+
+1. **Request Handling:**
+    - The Lambda function receives user queries through an API Gateway or other triggering mechanisms.
+    - It parses the input and prepares the query for interaction with the knowledge base.
+
+2. **Knowledge Base Interaction:**
+    - The Lambda function communicates with the Amazon Bedrock knowledge base to retrieve relevant information.
+    - It ensures that the query is processed using the embedding model and vector database for accurate results.
+
+3. **Response Generation:**
+    - After retrieving the relevant data, the Lambda function formats the response and sends it back to the user.
+    - The response is designed to be concise, context-aware, and aligned with the user's query.
+
+### Lambda Function Deployment:
+
+- Ensure that the Lambda functions have the necessary IAM permissions to interact with the S3 bucket, Amazon Bedrock, and other AWS services used in the application.
+
+By integrating Lambda functions, the AWS RAG Chatbot achieves a scalable and serverless architecture, enabling efficient query processing and response generation.
+
+
 ## Acknowledgments
 
 - Inspired by advancements in RAG techniques.
