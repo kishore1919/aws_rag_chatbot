@@ -109,6 +109,10 @@ The AWS RAG Chatbot leverages AWS Lambda functions to handle requests and respon
     - After retrieving the relevant data, the Lambda function formats the response and sends it back to the user.
     - The response is designed to be concise, context-aware, and aligned with the user's query.
 
+4. **Resyncing the Knowledge Base:**
+    - The Lambda function interacts with the Amazon Bedrock knowledge base and S3 to synchronize updated data with the knowledge base.
+    - Configure a trigger to execute the Lambda function automatically whenever new data is added to the S3 bucket.
+
 ### Lambda Function Deployment:
 
 - Ensure that the Lambda functions have the necessary IAM permissions to interact with the S3 bucket, Amazon Bedrock, and other AWS services used in the application.
